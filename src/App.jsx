@@ -11,8 +11,8 @@ function App() {
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand as={Link} to='/'>
-            <img src='/global-news-wire-logo.svg' width="50" height="50" alt="Logo" className="me-2" />
-            <span>Global News Wire</span>
+            <img src='/src/assets/ROCMNlogo.png' height="50" alt="Logo" className="me-2" />
+            <span className="ms-3">ROC Midden Nederland</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -27,7 +27,7 @@ function App() {
       <footer className="bg-body-tertiary py-1 mt-5">
         <Container fluid>
           <div className="text-center">
-            © Global News Wire | All rights reserved
+            © ROC Midden Nederland | All rights reserved
           </div>
         </Container>
       </footer>
