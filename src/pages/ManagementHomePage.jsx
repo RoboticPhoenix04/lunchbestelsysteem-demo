@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap"
 import TileManagement from "../components/TileManagement"
 import { BookHalf, BoxFill } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 function ManagementHomePage() {
     const tiles = [
@@ -18,7 +19,9 @@ function ManagementHomePage() {
                 <Row>
                     {tiles.map((tile, index) => {
                         return <Col key={index} md={6} className="d-flex justify-content-center">
-                            <TileManagement name={tile.name} icon={tile.icon} linkedpage={tile.linkedpage}/>
+                            <Link as={ Link } to={linkedpage} className="text-decoration-none">
+                                <TileManagement name={tile.name} icon={tile.icon} />
+                            </Link>
                         </Col>
                     })}
 
