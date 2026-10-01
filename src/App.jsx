@@ -19,6 +19,7 @@ function App() {
             <Nav className="ms-auto">
               <Nav.Link as={Link} to='/'>Home</Nav.Link>
               <Nav.Link as={Link} to='/Employee'>Employee</Nav.Link>
+              <Nav.Link as={Link} to='/managementhome'>Management Home</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
