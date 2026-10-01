@@ -12,7 +12,7 @@ function ManagementHomePage() {
     return (
         <>
             <Container>
-                <Row className="mt-5 mb-5">
+                <Row className="my-5">
                     <h1 className="text-center">
                         Welkom beheerder
                     </h1>
