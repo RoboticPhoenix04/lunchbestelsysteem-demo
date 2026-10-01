@@ -1,42 +1,31 @@
 import { Card, Button, Image } from "react-bootstrap"
-import { Link } from "react-router"
-import { ChevronDown } from "react-bootstrap-icons";
 
-
-function CardDish({ name, description }) {
+function CardDish({ name, description, price, onClick }) {
     return (
         <>
-            {/* <Card>
-                <Card.Img src="//placehold.co/200x100" />
-                <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text>
-                        {description}
-                    </Card.Text>
-                    <Button as={Link} to="/employee" variant="primary">Go somewhere</Button>
-                </Card.Body>
-            </Card> */}
-            <Card className="p-5">
-                <div className="d-flex">
-                    <Image src="//placehold.co/120"/>
-                    <div className="ms-4 d-flex flex-column">
-                        <h5>{name}</h5>
-                        <p>
-                            {description}
-                        </p>
-                        <div className="mt-auto d-flex justify-content-between">
-                            <div className="me-4">
-                                <span className="fs-4 me-2">€</span>
-                                <span className="fs-5">12,95</span>
-                            </div>
-
-                            <div className="d-flex align-items-center gap-3">
-                                <ChevronDown size={20} />
-                                <Button variant="primary">
-                                    Bestel
-                                </Button>
-                            </div>
+            <Card className="p-4" onClick={onClick}
+                style={{ cursor: "pointer" }}>
+                <div className="d-flex flex-column">
+                    <div className="d-flex flex-column flex-xl-row gap-3">
+                        <div className="flex-shrink-0">
+                            <Image fluid src="//placehold.co/200" />
                         </div>
+                        <div className="d-flex flex-column">
+                            <h5>{name}</h5>
+                            <p className="dishdescription">
+                                {description}
+                            </p>
+                        </div>
+                    </div>
+                    <div className="d-flex align-items-center justify-content-end mt-3">
+                        <span className="fs-4 me-2">€</span>
+                        <span className="fs-5">{price}</span>
+                        <Button className="ms-4" variant="primary" onClick={(e) => {
+                            e.stopPropagation();
+                            console.log("Bestelt");
+                        }}>
+                            Bestel
+                        </Button>
                     </div>
                 </div>
             </Card>
