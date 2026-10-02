@@ -8,29 +8,34 @@ function App() {
 
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container>
-          <Navbar.Brand as={Link} to='/'>
-            <img src='/src/assets/ROCMNlogo.png' height="50" alt="Logo" className="me-2" />
-            <span className="ms-3">ROC Midden Nederland</span>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link as={Link} to='/'>Home</Nav.Link>
-              <Nav.Link as={Link} to='/Employee'>Employee</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      <Outlet/>
-      <footer className="bg-body-tertiary py-1 mt-5">
-        <Container fluid>
-          <div className="text-center">
-            © ROC Midden Nederland | All rights reserved
-          </div>
-        </Container>
-      </footer>
+      <div className="d-flex flex-column min-vh-100">
+        <Navbar expand="lg" className="bg-body-tertiary">
+          <Container>
+            <Navbar.Brand as={Link} to='/'>
+              <img src='/src/assets/ROCMNlogo.png' height="50" alt="Logo" className="me-2" />
+              <span className="ms-3">ROC Midden Nederland</span>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ms-auto">
+                <Nav.Link as={Link} to='/'>Home</Nav.Link>
+                <Nav.Link as={Link} to='/employee'>Employee</Nav.Link>
+                <Nav.Link as={Link} to='/managementhome'>Management Home</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+        <main className="flex-grow-1">
+          <Outlet />
+        </main>
+        <footer className="bg-body-tertiary py-3 mt-5">
+          <Container fluid>
+            <div className="text-center">
+              © ROC Midden Nederland | Alle rechten voorbehouden
+            </div>
+          </Container>
+        </footer>
+      </div>
     </>
   )
 }

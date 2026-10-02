@@ -5,3 +5,12 @@
     line-clamp: 3;
     overflow: hidden;
 }
+
+.tile-icon {
+    width: 75%;
+    height: 75%;
+}
+
+.tile-card {
+    aspect-ratio: 1 / 1;
+}
