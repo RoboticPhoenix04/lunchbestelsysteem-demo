@@ -6,7 +6,7 @@ function ManagementHomePage() {
 
     const tiles = [
         { name: 'Voorraadbeheer', icon: <BoxFill className="tile-icon" />, linkedpage: "/" },
-        { name: 'Menu', icon: <BookHalf className="tile-icon" />, linkedpage: "/employee" }
+        { name: 'Menu', icon: <BookHalf className="tile-icon" />, linkedpage: "/managementmenu" }
     ];
 
     return (
