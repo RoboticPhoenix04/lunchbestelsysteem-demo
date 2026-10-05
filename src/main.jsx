@@ -6,6 +6,7 @@ import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import Employee from './pages/Employee.jsx'
 import ManagementHomePage from './pages/ManagementHomePage.jsx'
+import Storage from './pages/Storage.jsx'
 import ManagementMenuPage from './pages/ManagementMenuPage.jsx';
 import MenuItemEditPage from './pages/MenuItemEditPage.jsx';
 
@@ -28,6 +29,7 @@ createRoot(document.getElementById('root')).render(
         <Route index element={<Home />} />
         <Route path='employee' element={<Employee />} />
         <Route path='managementhome' element={<ManagementHomePage />} />
+        <Route path='storage' element={<Storage />} />
         <Route path='managementmenu' element={<ManagementMenuPage dishes={dishes} />} />
         <Route path='managementmenu/:id/edit' element={<MenuItemEditPage dishes={dishes} />} />
       </Route>
