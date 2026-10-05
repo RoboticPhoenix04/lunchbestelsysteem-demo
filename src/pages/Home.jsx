@@ -54,7 +54,7 @@ function Home() {
                 <Modal.Footer>
                     <Button
                         variant="primary"
-                        onClick={() => console.log("Snel bestelt")}
+                        onClick={() => console.log("Bestelling toegevoegd")}
                     >
                         Bestel
                     </Button>

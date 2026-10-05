@@ -1,6 +1,9 @@
 import { Card, Button, Image } from "react-bootstrap"
+import { useNavigate } from "react-router";
 
-function CardDish({ name, description, price, onClick }) {
+function CardMenu({id, name, description, onClick } ) {
+    const navigate = useNavigate();
+
     return (
         <>
             <Card className="p-4" onClick={onClick}
@@ -18,13 +21,11 @@ function CardDish({ name, description, price, onClick }) {
                         </div>
                     </div>
                     <div className="d-flex align-items-center justify-content-end mt-3">
-                        <span className="fs-4 me-2">€</span>
-                        <span className="fs-5">{price}</span>
                         <Button className="ms-4" variant="primary" onClick={(e) => {
                             e.stopPropagation();
-                            console.log("Bestelling toegevoegd");
+                            navigate(`/managementmenu/${id}/edit`)
                         }}>
-                            Bestel
+                            Bewerken
                         </Button>
                     </div>
                 </div>
@@ -33,6 +34,4 @@ function CardDish({ name, description, price, onClick }) {
     )
 }
 
-export default CardDish
-
-
+export default CardMenu
